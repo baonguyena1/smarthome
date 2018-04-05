@@ -14,10 +14,3 @@ app.config(function($urlRouterProvider, $stateProvider) {
         resolve: {}
     })
 });
-
-app.controller('loginController', function($rootScope, $scope, $state) {
-
-    $scope.login = function() {
-        console.log('username = ', $scope.username);
-    }
-});
