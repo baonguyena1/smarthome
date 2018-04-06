@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('smarthome', ['ui.router']);
+var app = angular.module('smarthome', ['ui.router', 'ui.bootstrap']);
 
 app.config(function($urlRouterProvider, $stateProvider) {
 
@@ -13,4 +13,19 @@ app.config(function($urlRouterProvider, $stateProvider) {
         cache: false,
         resolve: {}
     })
+    .state('dashboard', {
+        url: '/dasbboard',
+        templateUrl: 'application/views/dashboard/dashboard.html',
+        cache: false,
+        resolve: {}
+    })
 });
+
+// app.run(function($rootScope, $state, $stateParams) {
+//     $rootScope.$state = $state;
+//     $rootScope.$stateParams = $stateParams;
+
+//     $rootScope.$on('$stateChangeStart', function(event, toState, toPatams, fromState, fromParams) {
+//         console.log('smarthome#run#stateChangeStart; from:', fromState.name, ' to:', toState.name);
+//     })
+// })

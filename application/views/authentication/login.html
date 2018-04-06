@@ -6,7 +6,7 @@
         <div class="jumbotron" ng-if="result.status != null && !result.status">
             <div class="container">
                 <p class="title">Sai thông tin đăng nhập</p>
-                <p>Tên người dùng hoặc mật khẩu không hợp lệ</p>
+                <p>{{result.message}}</p>
             </div>
             
         </div>
