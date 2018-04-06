@@ -12,7 +12,7 @@ app.controller('loginController', function($rootScope, $scope, $state) {
 
         var result = {
             'errors': null,
-            'status': false,
+            'status': true,
             'message': 'success'
         };
         $rootScope.$broadcast('response', result);
