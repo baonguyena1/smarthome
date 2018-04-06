@@ -3,6 +3,13 @@
     <form class="form-signin">
         <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <div class="jumbotron" ng-if="result.status != null && !result.status">
+            <div class="container">
+                <p class="title">Sai thông tin đăng nhập</p>
+                <p>Tên người dùng hoặc mật khẩu không hợp lệ</p>
+            </div>
+            
+        </div>
         <input type="text" class="form-control" ng-model="username" placeholder="Username" required autofocus>
         <input type="password" class="form-control" ng-model="password" placeholder="Password" required>
         <div class="checkbox mb-3">
@@ -10,6 +17,6 @@
                 <input type="checkbox" ng-model="remember_me"> Remember me
             </label>
         </div>
-        <button class="btn btn-lb btn-primary btn-block" type="submit" ng-click="login()">Sign in</button>
+        <button class="btn btn-lb btn-primary btn-block" type="submit" ng-click="login()" ng-disabled="disable(username, password)">Sign in</button>
     </form>
 </div>
