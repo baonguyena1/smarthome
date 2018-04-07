@@ -1,8 +1,8 @@
-div.main {
+div.login {
     height: 100vh;
 }
 
-div.main {
+div.login {
     display: -ms-flexbox;
     display: -webkit-box;
     display: flex;
