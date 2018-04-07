@@ -1,9 +1,9 @@
-app.controller('modal.logout', function($scope, $uibModalInstance) {
+app.controller('modal.logout', function($scope, $uibModalInstance, data) {
+    $scope.data = data;
     $scope.ok = function () {
-        $modalInstance.close();
+        $uibModalInstance.close();
     };
-    
     $scope.cancel = function () {
-        $modalInstance.dismiss('cancel');
+        $uibModalInstance.dismiss('cancel');
     };
 })
