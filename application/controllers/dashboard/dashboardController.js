@@ -7,7 +7,9 @@ app.controller('dashboardController', function($rootScope, $scope, $state, $uibM
                 message: 'Select "Logout" below if you are ready to end your current session.'
             }
             appAlert.logout(data, function(isOk) {
-                $state.go('login');
+                if (isOk) {
+                    $state.go('login');
+                }
             });
         }
     }

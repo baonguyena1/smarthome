@@ -7,14 +7,14 @@ app.service('appAlert', function($uibModal, $http) {
 
         var modalInstance = $uibModal.open({
             templateUrl: 'application/views/common/logout-modal.html',
-            controller: 'modal.logout',
-            cache: false,
+            controller: 'logoutModalController',
+            animation: true,
             resolve: {
                 data: function() {
                     return data;
                 }
             }
-        });
+        })
         modalInstance.result.then(function() {
             return callback(true);
         }, function() {
@@ -31,14 +31,12 @@ app.config(function($urlRouterProvider, $stateProvider) {
         url: '/login',
         templateUrl: 'application/views/authentication/login.html',
         controller: 'loginController',
-        cache: false,
         resolve: {}
     })
     .state('dashboard', {
         url: '/dasbboard',
         templateUrl: 'application/views/dashboard/dashboard.html',
         controller: 'dashboardController',
-        cache: false,
         resolve: {}
     })
 });
