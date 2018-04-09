@@ -8,7 +8,7 @@ app.service('appAlert', function($uibModal, $http) {
         var modalInstance = $uibModal.open({
             templateUrl: 'application/views/common/logout-modal.html',
             controller: 'logoutModalController',
-            animation: true,
+            animation: false,
             resolve: {
                 data: function() {
                     return data;
